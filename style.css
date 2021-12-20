@@ -33,10 +33,7 @@ body {
 main {
   background-color: #fff;
   width: 330px;
-  /* position: absolute;
-  top: 48%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
+  position: relative;
   border-radius: 13px;
   overflow: hidden;
   box-shadow: 0px 3px 30px hsl(211, 30%, 85%);
