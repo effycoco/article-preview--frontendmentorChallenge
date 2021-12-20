@@ -75,6 +75,25 @@ Users should be able to:
    完整版见 CSS in Depth 8.1.1
 
 4. 利用 flexbox 实现一中一下布局[codepen](https://codepen.io/effycoco/pen/GRMEOgZ)
+5. 对于纯装饰性的内容如图标应使用 aria-hidden="true"
+   aria-label 属性用来给当前元素加上的标签描述，接受字符串作为参数。是用不可视的方式给元素加 label
+   例如用于分享的社交网站列表应这样写：
+
+   ```html
+   <ul>
+     <li>
+       <a aria-label="github"><svg aira-hidden="true"></svg></a>
+     </li>
+     <li>
+       <a aria-label="twitter"><svg aira-hidden="true"></svg></a>
+     </li>
+     <li>
+       <a aria-label="codewars"><svg aira-hidden="true"></svg></a>
+     </li>
+   </ul>
+   ```
+
+6. 控制下拉菜单是否显示的按钮应该加上`aira-expanded="false"`
 
 ### Useful resources
 
