@@ -14,53 +14,69 @@
 </head>
 
 <body>
-  <main class="container">
-    <img class="hero" src="images/drawers.jpg" alt="a green drawer cabinet" />
-    <div class="wrapper">
-      <section>
-        <article>
-          <h1>
-            Shift the overall look and feel by adding these wonderful touches to
-            furniture in your home
-          </h1>
-          <p>
-            Ever been in a room and felt like something was missing? Perhaps it
-            felt slightly bare and uninviting. I’ve got some simple tips to help
-            you make any room feel complete.
-          </p>
-        </article>
+  <div class="outmost-wrapper">
+    <main class="container">
+      <img class="hero" src="images/drawers.jpg" alt="a green drawer cabinet" />
+      <div class="wrapper">
+        <section>
+          <article>
+            <h1>
+              Shift the overall look and feel by adding these wonderful touches to
+              furniture in your home
+            </h1>
+            <p>
+              Ever been in a room and felt like something was missing? Perhaps it
+              felt slightly bare and uninviting. I’ve got some simple tips to help
+              you make any room feel complete.
+            </p>
+          </article>
 
-        <div class="user">
-          <img src="images/avatar-michelle.jpg" alt="avatar of Michelle" class="avatar" />
-          <div class="info">
-            <div class="name">Michelle Appleton</div>
-            <div class="date">28 Jun 2020</div>
+          <div class="user">
+            <img src="images/avatar-michelle.jpg" alt="Michelle Appleton" class="avatar" />
+            <div class="info">
+              <div class="name">Michelle Appleton</div>
+              <div class="date">28 Jun 2020</div>
+            </div>
+            <button class="share" aria-label="toggle share on social media dropdown" aria-expanded="false">
+              <img class="share-icon" src="images/icon-share.svg" alt="share icon" />
+            </button>
           </div>
-          <div class="share">
-            <button class="share-btn">Share</button>
+        </section>
+
+        <div class="share-container" id="share-menu">
+          <p class="text">Share</p>
+          <ul class="media-list">
+            <li>
+              <a aria-label="facebook" href="https://www.facebook.com/">
+                <img src="images/icon-facebook.svg" alt="" aria-hidden="true" />
+              </a>
+            </li>
+            <li>
+              <a aria-label="twitter" href="https://twitter.com/">
+                <img src="images/icon-twitter.svg" alt="" aria-hidden="true" />
+              </a>
+            </li>
+            <li>
+              <a aria-label="pinterest" href="https://www.pinterest.com/">
+                <img src="images/icon-pinterest.svg" alt="" aria-hidden="true" />
+              </a>
+            </li>
+          </ul>
+          <button class="share" aria-label="close share menu" aria-expanded="true">
             <img class="share-icon" src="images/icon-share.svg" alt="share icon" />
-          </div>
-        </div>
-      </section>
-      <div class="share-list" id="share-menu">
-        <span class="text">Share</span>
-        <a href="https://www.facebook.com/"><img src="images/icon-facebook.svg" alt="facebook icon" /></a>
-        <a href="https://twitter.com/"><img src="images/icon-twitter.svg" alt="twitter icon" /></a>
-        <a href="https://www.pinterest.com/"><img src="images/icon-pinterest.svg" alt="" /></a>
-
-        <div class="share">
-          <img class="share-icon" src="images/icon-share.svg" alt="share icon" />
+          </button>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
+  </div>
   <footer class="attribution">
     Challenge by
     <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
     <a href="https://github.com/effycoco?tab=repositories">Effy</a>.
   </footer>
+
   <script>
-    const btns = document.getElementsByClassName('share-icon');
+    const btns = document.getElementsByClassName('share');
     for (btn of btns) {
       btn.addEventListener('click', function (event) {
         event.preventDefault();

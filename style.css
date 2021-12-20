@@ -19,14 +19,24 @@ body {
   background-color: var(--light-grayish-blue);
   font-family: "Manrope", sans-serif;
   color: var(--desaturated-dark-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100vh;
+}
+.outmost-wrapper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
 main {
   background-color: #fff;
   width: 330px;
-  position: absolute;
+  /* position: absolute;
   top: 48%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   border-radius: 13px;
   overflow: hidden;
   box-shadow: 0px 3px 30px hsl(211, 30%, 85%);
@@ -83,6 +93,7 @@ main .user {
   height: 30px;
   position: relative;
   border-radius: 50%;
+  border: none;
 }
 .user .name {
   color: var(--dark-grayish-blue);
@@ -91,16 +102,14 @@ main .user {
 .user .date {
   margin-top: 3px;
 }
-.user .share-btn {
-  display: none;
-}
+
 .share-icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.share-list {
+.share-container {
   background-color: var(--dark-grayish-blue);
 
   align-items: center;
@@ -118,17 +127,17 @@ main .user {
   img.hero {
     border-radius: 13px 0 0 13px;
   }
-  .share-list {
+  .share-container {
     left: auto;
     right: -65px;
     bottom: 90px;
     border-radius: 13px;
     box-shadow: 3px 5px 10px hsl(211, 30%, 85%);
   }
-  .share-list .share {
+  .share-container .share {
     display: none;
   }
-  .share-list::after {
+  .share-container::after {
     content: "";
     position: absolute;
     bottom: -20px;
@@ -137,24 +146,33 @@ main .user {
     border-color: var(--dark-grayish-blue) transparent transparent;
   }
 }
-.share-list.is-open {
+.share-container.is-open {
   display: flex;
 }
-.share-list .text {
+.share-container .text {
   text-transform: uppercase;
   letter-spacing: 4px;
+  display: inline-block;
 }
-.share-list a {
+.share-container a {
   margin-left: 15px;
 }
+.media-list {
+  list-style: none;
+}
+.media-list li {
+  display: inline-block;
+}
 .attribution {
-  position: absolute;
+  margin-bottom: 15px;
+  /* position: absolute;
   top: 97%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, 0); */
   font-size: 11px;
   /* text-align: center; */
 }
 .attribution a {
   color: var(--dark-grayish-blue);
+  text-decoration: none;
 }

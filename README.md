@@ -74,6 +74,8 @@ Users should be able to:
    [简化版](https://codepen.io/effycoco/pen/VwMWZOw?editors=1111)
    完整版见 CSS in Depth 8.1.1
 
+4. 利用 flexbox 实现一中一下布局[codepen](https://codepen.io/effycoco/pen/GRMEOgZ)
+
 ### Useful resources
 
 - [CSS in Depth 7.3.2 制作 css 三角形](https://www.example.com) - 介绍了原理和用法.
